@@ -70,7 +70,11 @@ const RegisUsaha = ({navigation}) => {
         style={{marginTop: 100}}>
         <View style={{flex: 1}}>
           <View style={styles.textinput}>
-            <Text style={styles.brand}>Brand service name</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Brand service name</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               // onFocus={() => setFocus(true)}
               style={styles.txtinput}
@@ -79,7 +83,11 @@ const RegisUsaha = ({navigation}) => {
               onChangeText={setBrand}
             />
 
-            <Text style={styles.txtajah}>Business Address</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Business Address</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <View>
               <DropDownPicker
                 dropDownDirection="BOTTOM"
@@ -98,7 +106,11 @@ const RegisUsaha = ({navigation}) => {
               />
             </View>
 
-            <Text style={styles.txtajah}>Business Phone</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Business Phone</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               // onFocus={() => setFocus(true)}
               style={styles.txtinput}
@@ -107,7 +119,11 @@ const RegisUsaha = ({navigation}) => {
               onChangeText={setBusinessPhone}
             />
 
-            <Text style={styles.txtajah}>Phone Number</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Phone Number</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               // onFocus={() => setFocus(true)}
               style={styles.txtinput}
@@ -116,7 +132,11 @@ const RegisUsaha = ({navigation}) => {
               onChangeText={setPhonenumber}
             />
 
-            <Text style={styles.txtajah}>Email</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Email</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               // onFocus={() => setFocus(true)}
               style={styles.txtinput}
@@ -124,7 +144,11 @@ const RegisUsaha = ({navigation}) => {
               editable={false}
             />
 
-            <Text style={styles.txtajah}>Type of Business Categories</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Type of Business Categories</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <View>
               <DropDownPicker
                 dropDownDirection="TOP"
@@ -142,7 +166,12 @@ const RegisUsaha = ({navigation}) => {
                 style={styles.txtinput}
               />
             </View>
-            <Text style={styles.txtajah}>Service Fee</Text>
+
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Service Fee</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               // onFocus={() => setFocus(true)}
               style={styles.txtinput}
@@ -186,6 +215,18 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
   },
+  wrapbintang: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  bintang: {
+    width: '2%',
+    height: 20,
+    color: 'red',
+    paddingLeft: 6,
+    paddingTop: 4,
+    justifyContent: 'center',
+  },
   textinput: {
     color: color.darkgrey,
     paddingBottom: 30,
@@ -201,6 +242,9 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: color.white,
     fontFamily: 'Mulish-Regular',
+  },
+  bintang: {
+    color: 'red',
   },
   header2: {
     marginTop: 10,

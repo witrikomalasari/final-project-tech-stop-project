@@ -102,7 +102,7 @@ const VerificationCustomer = ({navigation}) => {
       </View>
       <View style={{flex: 1, justifyContent: 'flex-end', bottom: 30}}>
         <CustomButton
-          title="Daftar"
+          title="Register"
           // jika ada 2 function harus ditutup dengan 1 curly bracket
           onPressButton={() => Emailhandler()}
         />

@@ -5,6 +5,9 @@ import {color} from '../../Default/color';
 
 const Verification = ({navigation, route}) => {
   const email = useSelector(state => state.userReducer.email);
+  const emailpartner = useSelector(state => state.userReducer.emailpartner);
+
+  console.log('partner', emailpartner);
   const [countdown, setCountdown] = useState('3');
 
   useEffect(() => {
@@ -39,7 +42,9 @@ const Verification = ({navigation, route}) => {
         </Text>
         <View style={{flexDirection: 'row'}}>
           <Text style={styles.txt}>email to,</Text>
-          <Text style={styles.txt}>{email}</Text>
+          <Text style={styles.txt}>
+            {route.params.role == 'partner' ? emailpartner : email}
+          </Text>
         </View>
         <Text style={{marginTop: 30}}>Auto Verify in</Text>
 

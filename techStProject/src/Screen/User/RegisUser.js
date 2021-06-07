@@ -92,7 +92,11 @@ const RegisUser = ({navigation}) => {
 
         <View style={styles.subcontainer}>
           <View style={styles.textinput}>
-            <Text style={styles.name}>Name</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Name</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               // onFocus={() => setFocus(true)}
               style={styles.txtinput}
@@ -100,15 +104,20 @@ const RegisUser = ({navigation}) => {
               value={name}
               onChangeText={setName}
             />
-
-            <Text style={styles.txtajah}>Email</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Email</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
             <TextInput
               style={styles.txtinput}
               placeholder={email}
               editable={false}
             />
 
-            <Text style={styles.txtajah}>Password</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Password</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
             <TextInput
               style={styles.txtinput}
               placeholder="Password"
@@ -116,7 +125,11 @@ const RegisUser = ({navigation}) => {
               onChangeText={text => setPassword(text)}
             />
 
-            <Text style={styles.txtajah}>Confirm Password</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Confirm Password</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               style={styles.txtinput}
               placeholder="Confirm Password"
@@ -125,7 +138,11 @@ const RegisUser = ({navigation}) => {
               onChangeText={text => setConfirmPassword(text)}
             />
 
-            <Text style={styles.txtajah}>Phone Number</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Phone Number</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
+
             <TextInput
               style={styles.txtinput}
               placeholder="Phone Number"
@@ -133,7 +150,10 @@ const RegisUser = ({navigation}) => {
               onChangeText={text => setPhonenumber(text)}
             />
 
-            <Text style={styles.txtajah}>City of region</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>City of region</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
             <View>
               <DropDownPicker
                 dropDownDirection="TOP"
@@ -152,7 +172,10 @@ const RegisUser = ({navigation}) => {
               />
             </View>
 
-            <Text style={styles.txtajah}>Postal Code</Text>
+            <View style={styles.wrapbintang}>
+              <Text style={styles.txtajah}>Postal Code</Text>
+              <Text style={styles.bintang}>*</Text>
+            </View>
             <TextInput
               style={styles.txtinput}
               placeholder="Postal Code"
@@ -165,7 +188,7 @@ const RegisUser = ({navigation}) => {
           <Buttontrans
             title="Cancel"
             // jika ada 2 function harus ditutup dengan 1 curly bracket
-            onPressButton={() => navigation.navigate('Join')}
+            onPressButton={() => navigation.navigate('Login')}
           />
           <Buttongrad
             title="Save"
@@ -198,6 +221,18 @@ const styles = StyleSheet.create({
     height: 110,
     position: 'absolute',
     top: 0,
+  },
+  wrapbintang: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  bintang: {
+    width: '2%',
+    height: 20,
+    color: 'red',
+    paddingLeft: 3,
+    paddingTop: 4,
+    justifyContent: 'center',
   },
   txtheader: {
     position: 'absolute',

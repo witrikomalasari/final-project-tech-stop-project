@@ -15,16 +15,20 @@ import {useDispatch} from 'react-redux';
 import {emailAccessPartner} from '../Redux/Action/userAction';
 
 const VerificationPartner = ({navigation}) => {
-  const [email, setEmail] = useState('');
+  const [emailpartner, setEmailpartner] = useState('');
   const dispatch = useDispatch();
   // console.log(email);
 
   // const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const regex = /\./g;
   const Emailhandler = async () => {
-    if (email.match('@') && email.match(regex) && email.length > 8) {
-      await dispatch(emailAccessPartner(email));
-      setEmail('');
+    if (
+      emailpartner.match('@') &&
+      emailpartner.match(regex) &&
+      emailpartner.length > 8
+    ) {
+      await dispatch(emailAccessPartner(emailpartner));
+      setEmailpartner('');
       await navigation.navigate('Verification', {
         role: 'partner',
       });
@@ -85,8 +89,8 @@ const VerificationPartner = ({navigation}) => {
           <TextInput
             style={styles.txtinput}
             placeholder="Email"
-            value={email}
-            onChangeText={val => setEmail(val)}
+            value={emailpartner}
+            onChangeText={val => setEmailpartner(val)}
           />
           <Text
             style={{
