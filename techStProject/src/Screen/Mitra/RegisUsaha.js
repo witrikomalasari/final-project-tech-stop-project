@@ -15,10 +15,10 @@ import {useDispatch, useSelector} from 'react-redux';
 import {emailAccessPartner} from '../../Redux/Action/userAction';
 
 const RegisUsaha = ({navigation}) => {
-  const [brand, setBrand] = useState('Onclick Hardware');
-  const [businessphone, setBusinessPhone] = useState('+6288855656766');
-  const [phonenumber, setPhonenumber] = useState('+6288855656766');
-  const [servicefee, setServiceFee] = useState('150000');
+  const [brand, setBrand] = useState('');
+  const [businessphone, setBusinessPhone] = useState('');
+  const [phonenumber, setPhonenumber] = useState('');
+  const [servicefee, setServiceFee] = useState('');
   const [value, setValue] = useState('');
   const [valueservice, setValueService] = useState('');
   const emailpartner = useSelector(state => state.userReducer.emailpartner);

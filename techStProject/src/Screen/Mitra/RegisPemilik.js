@@ -15,13 +15,11 @@ import Buttongrad from '../../Component/Buttongrad';
 import ImagePicker from 'react-native-image-crop-picker';
 
 const RegisPemilik = props => {
-  const [fullname, setFullname] = useState('Sudarmadi');
-  const [password, setPassword] = useState('Madi123!!');
-  const [confirmPassword, setConfirmPassword] = useState('Madi123!!');
-  const [address, setAddress] = useState(
-    'Jl. Cempaka Baru Timur Bandung Selatan',
-  );
-  const [domicile, setDomicile] = useState('Bandung');
+  const [fullname, setFullname] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [address, setAddress] = useState('');
+  const [domicile, setDomicile] = useState('');
   const [ktp_image, setKtp_image] = useState({
     type: '',
     path:

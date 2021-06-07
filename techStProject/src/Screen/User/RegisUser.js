@@ -17,12 +17,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 
 const RegisUser = ({navigation}) => {
-  const [name, setName] = useState('Wendi Sapardi');
-  const [password, setPassword] = useState('Wenwen123!!');
-  const [confirmPassword, setConfirmPassword] = useState('Wenwen123!!');
-  const [phonenumber, setPhonenumber] = useState('+6287877456599');
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [phonenumber, setPhonenumber] = useState('');
   const [value, setValue] = useState(null);
-  const [postalcode, setPostalcode] = useState('10650');
+  const [postalcode, setPostalcode] = useState('');
   const email = useSelector(state => state.userReducer.email);
   // console.log(email);
 
