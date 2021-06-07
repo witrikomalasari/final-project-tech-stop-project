@@ -137,11 +137,11 @@ const Order = props => {
               brandServiceName={item.partner.brand_service_name}
               categoryName={item.partner.category.category_name}
               bookFor={moment(item.appointment_date).format('DD MMMM YYYY')}
-              onPressButton={async () => {
-                await dispatch(getDetailUser(item.id));
-                await props.navigation.navigate('OrderDetail', {
-                  order: item.id,
-                });
+              onPressButton={() => {
+                // await dispatch(getDetailUser(item.id));
+                // await props.navigation.navigate('OrderDetail', {
+                //   order: item.id,
+                // });
               }}
             />
           );
